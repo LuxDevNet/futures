@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>/TERMINAL — SETTINGS · DATA SOURCE CANVAS</title>
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/nodecanvas.css" />
+</head>
+<body class="nc">
+
+  <header class="nc-topbar">
+    <div class="brand">
+      <span class="prompt">❯</span>
+      <span class="name">/TERMINAL — SETTINGS · DATA SOURCES</span>
+      <span class="cursor"></span>
+    </div>
+    <div class="spacer"></div>
+    <span id="nc-stats" class="nc-stats">0 tiles · 0 wires</span>
+    <span id="nc-zoom" class="nc-zoom">100%</span>
+    <button id="nc-fit" class="pill-btn" type="button" title="fit all tiles in view">FIT</button>
+    <button id="nc-addsink" class="pill-btn" type="button" title="add the next terminal panel tile">+ PANEL</button>
+    <button id="nc-clear" class="pill-btn" type="button" title="reset canvas to seed wiring">RESET</button>
+    <a class="pill-btn" href="index.html" title="back to the terminal">← TERMINAL</a>
+  </header>
+
+  <main class="nc-main">
+
+    <!-- preset node list -->
+    <aside class="nc-left">
+      <div class="nc-left-head">SOURCE LIBRARY · 52 PRESETS</div>
+      <input id="nc-search" class="nc-search" type="search" placeholder="filter sources…" autocomplete="off" />
+      <div id="nc-palette" class="nc-palette" aria-label="data source library"></div>
+    </aside>
+
+    <!-- infinite canvas -->
+    <section id="nc-stage" class="nc-stage" aria-label="node canvas">
+      <svg id="nc-edges" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div id="nc-world"></div>
+    </section>
+
+    <!-- inspector -->
+    <aside class="nc-right">
+      <div class="nc-right-head">INSPECTOR</div>
+      <div id="nc-inspector"></div>
+      <div class="nc-help">
+        <b>pan</b> drag empty canvas<br />
+        <b>zoom</b> mouse wheel (anchored at cursor)<br />
+        <b>move tile</b> drag its header<br />
+        <b>plug in</b> drag a source's right port onto a panel tile<br />
+        <b>unwire</b> click a wire<br />
+        <b>add source</b> click it in the library<br />
+        <b>api keys</b> select a keyed source, paste key — stored in browser only<br />
+        <b>persist</b> graph auto-saves to localStorage
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="js/datasources.js"></script>
+  <script src="js/nodecanvas.js"></script>
+  <script>NodeCanvas.boot();</script>
+</body>
+</html>
