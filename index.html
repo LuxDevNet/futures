@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>/TERMINAL — Global Market Monitor</title>
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div id="boot" role="status" aria-label="boot sequence">
+    <pre id="boot-log"></pre>
+    <div class="boot-skip">click / any key to skip</div>
+  </div>
+
+  <header class="topbar glass-bar">
+    <div class="brand">
+      <span class="prompt">❯</span>
+      <span class="name">/TERMINAL — Global Market Monitor</span>
+      <span class="cursor"></span>
+    </div>
+    <div class="spacer"></div>
+    <span id="utc-clock" class="utc-clock">UTC --:--:--</span>
+    <div class="status">
+      <span id="cloud-led" class="dot dot-demo dim" title="local-only mode — sign in via ⚙ SETUP"></span>
+      <span id="status-dot" class="dot dot-demo"></span>
+      <span id="status-text">demo feed</span>
+    </div>
+    <button id="settings-open" class="pill-btn" type="button" title="Settings">⚙ SETUP</button>
+    <button id="scan-toggle" class="pill-btn" type="button" title="Toggle scanlines (S)">SCAN</button>
+    <button id="mode-toggle" class="pill-btn" type="button" title="Toggle data adapter (L)">DEMO</button>
+    <button id="layout-reset" class="pill-btn" type="button" title="Reset layout (R)">RESET</button>
+  </header>
+
+  <div class="tape glass-bar" aria-label="ticker tape">
+    <div class="tape-label">TAPE</div>
+    <div class="tape-viewport">
+      <div id="tape-track" class="tape-track"></div>
+    </div>
+  </div>
+
+  <main id="canvas" class="canvas" aria-label="dashboard canvas"></main>
+
+  <script src="js/boot.js"></script>
+  <script src="js/themes.js"></script>
+  <script src="js/mapdata.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/widgets.js"></script>
+  <script src="js/providers.js"></script>
+  <script src="js/cloud.js"></script>
+  <script src="js/newviews.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/quant.js"></script>
+  <script src="js/strategy.js"></script>
+  <script src="js/positions.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
